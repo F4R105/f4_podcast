@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F4 Podcast || Admin</title>
+    <link rel="stylesheet" href="../styles/util.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+    <div id="nav">
+        <div class="container navbar_container">
+            <div id="logo"><span>F4</span>PODCAST</div>
+            <div id="navLinks">
+                <a href="#">ACCOUNT</a>
+                <a href="#">LOGOUT</a>
+            </div>
+        </div>
+    </div>
+    <section class="dashboard">
+        <div class="container">
+            <div class="panel upload_panel">
+                <div class="episodes_count">
+                    <span id="counter">1203 Episodes</span>
+                    <div>
+                        <svg id='addBtn' aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg>
+                    </div>
+                </div>
+                <div id="upload_centre">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <input type="file" name="file_input" id="file_input">
+                        <p id="fileName">No file chosen</p>
+                        <label for="title">Episode title</label>
+                        <input type="text" name="title" id="title">
+                        <label for="descr">Description</label>
+                        <textarea name="descr" id="descr" cols="30" rows="3"></textarea>
+                        <button type="submit" id="uploadBtn" disabled>UPLOAD</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="manage_episodes">
+        <div class="container">
+            <div class="panel episodes_panel">
+                <div class="episodes_container">
+                    <h2>MANAGE EPISODES</h2>
+                    <div class="episode">
+                        <div class="info">
+                            <p class="episode_title">This is episode title</p>
+                            <p class="episode_descr">The description for podcast episode stays here and more..</p>
+                        </div>
+                        <a href="#">
+                            <svg class='removeBtn' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                        </a>
+                    </div>                                      
+                    <div class="episode">
+                        <div class="info">
+                            <p class="episode_title">This is episode title</p>
+                            <p class="episode_descr">The description for podcast episode stays here and more..</p>
+                        </div>
+                        <a href="#">
+                            <svg class='removeBtn' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                        </a>
+                    </div>                                      
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">
+            <p>Copyright &copy 2022 Faraji Kajubu</p>
+        </div>
+    </footer>
+</body>
+<script src="../scripts/admin.js"></script>
+</html>

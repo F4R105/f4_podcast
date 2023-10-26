@@ -1,0 +1,104 @@
+@import 'mixins';
+
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav{
+
+    #logo{
+        color: var(--white);
+        font-weight: bold;
+        font-size: 1.5rem;
+        width: fit-content;
+
+        @media(max-width: 500px){
+            margin: 0 auto;
+        }
+    }
+
+    #logo span{
+        color: var(--yellow);
+    }
+
+    a{
+        text-decoration: none;
+        // outline: 2px solid white;
+        color: var(--white);
+        padding: 0.3em;
+        margin-left: 1em;
+
+        &:hover{
+            color: var(--yellow);
+        }
+    }
+
+}
+
+section{
+    background-color: rgb(80, 80, 80);
+}
+
+.cred_container > div{
+    // outline: 2px solid red;
+    min-height: 85vh;
+    color: white;
+    margin-bottom: 2em;
+    border-radius: 5px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    form{
+        // outline: 2px solid white;
+        margin-top: 1.5em;
+        padding: 1em;
+        width: clamp(250px,40vw,500px);
+        background-color: rgb(41, 41, 41);
+        border-radius: 3px;
+
+        h4{
+            margin-bottom: 1em;
+        }
+
+        label{
+            display: block;
+            font-size: 0.8rem;
+            color: var(--grey);
+            margin-bottom: 0.5em;
+        }
+
+        input{
+            @include input;
+            width: 100%;
+            color: var(--grey);
+            outline: 1px solid rgba(white,0.1);
+            margin-bottom: 0.5em;
+            border-radius: 2px;
+            box-shadow: 5px 5px 5px rgba(black,0.2) inset;
+
+            &:focus{
+                outline: 1px solid rgba(white,0.5);
+                box-shadow: none;
+            }
+        } 
+        
+        button{
+            @include button;
+            width: 100%;
+            padding: 0.3em;
+            margin-bottom: 0.5em;
+            margin-top: 1em;
+            font-size: 1.2rem;
+            background-color: rgb(219, 219, 7);
+
+            &:hover{
+                background-color: rgb(185, 185, 8);
+            }
+        }
+    }
+}

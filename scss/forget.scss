@@ -1,0 +1,72 @@
+@import 'mixins';
+
+#nav{
+
+    #logo{
+        color: var(--white);
+        font-weight: bold;
+        font-size: 1.5rem;
+        width: fit-content;
+
+        @media(max-width: 500px){
+            margin: 0 auto;
+        }
+    }
+
+    #logo span{
+        color: var(--yellow);
+    }
+
+}
+
+.forget_container{
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    form{
+        color: white;
+        outline: 2px solid rgba(white,0.1);
+        padding: 0.5em;
+        margin-bottom: 2em;
+
+        & > div{
+            display: flex;
+
+            @media(max-width: 500px){
+                flex-direction: column;
+            }
+        }
+
+        label{
+            display: block;
+        }
+
+        input{
+            @include input;
+            background-color: white;
+            border: 2px solid white;
+        }
+
+        button{
+            @include button;
+            color: var(--black);
+            font-size: 1rem;
+            background-color: var(--yellow);
+            padding: 0.6em;
+
+            &:hover{
+                background-color: rgb(219, 219, 7);
+            }
+        }
+    }
+
+    p{
+        color: var(--grey);
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,31 @@
+.navbar_container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+#nav #logo { color: var(--white); font-weight: bold; font-size: 1.5rem; width: -webkit-fit-content; width: -moz-fit-content; width: fit-content; }
+
+@media (max-width: 500px) { #nav #logo { margin: 0 auto; } }
+
+#nav #logo span { color: var(--yellow); }
+
+#nav a { text-decoration: none; color: var(--white); padding: 0.3em; margin-left: 1em; }
+
+#nav a:hover { color: var(--yellow); }
+
+section { background-color: #505050; }
+
+.cred_container > div { min-height: 85vh; color: white; margin-bottom: 2em; border-radius: 5px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.cred_container > div form { margin-top: 1.5em; padding: 1em; width: clamp(250px, 40vw, 500px); background-color: #292929; border-radius: 3px; }
+
+.cred_container > div form h4 { margin-bottom: 1em; }
+
+.cred_container > div form label { display: block; font-size: 0.8rem; color: var(--grey); margin-bottom: 0.5em; }
+
+.cred_container > div form input { border: none; background: none; padding: 0.3em; font-size: 1.2rem; width: 100%; color: var(--grey); outline: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 0.5em; border-radius: 2px; -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2) inset; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2) inset; }
+
+.cred_container > div form input:focus { outline: none; }
+
+.cred_container > div form input:focus { outline: 1px solid rgba(255, 255, 255, 0.5); -webkit-box-shadow: none; box-shadow: none; }
+
+.cred_container > div form button { border: none; background: none; cursor: pointer; font-size: 1.2rem; width: 100%; padding: 0.3em; margin-bottom: 0.5em; margin-top: 1em; font-size: 1.2rem; background-color: #dbdb07; }
+
+.cred_container > div form button:hover { background-color: #b9b908; }

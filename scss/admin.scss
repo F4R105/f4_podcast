@@ -1,0 +1,211 @@
+@import 'mixins';
+
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav{
+
+    #logo{
+        color: var(--white);
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    #logo span{
+        color: var(--yellow);
+    }
+
+    a{
+        text-decoration: none;
+        // outline: 2px solid white;
+        color: var(--white);
+        padding: 0.3em;
+        margin-left: 1em;
+
+        &:hover{
+            color: var(--yellow);
+        }
+    }
+
+}
+
+.dashboard{
+    background-color: rgb(49, 49, 49);
+}
+
+.manage_episodes{
+    background-color: rgb(68, 68, 68);
+}
+
+.panel{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+.panel.upload_panel{
+    // outline: 2px solid white;
+    min-height: 200px;
+
+    .episodes_count{
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+
+        #counter{
+            // outline: 2px solid red;
+            border-radius: 3px;
+            width: fit-content;
+            padding: 0.3em 1em;
+            font-size: 1.5rem;
+            background-color: rgb(41, 41, 41);
+            color: var(--grey);
+        }
+
+        & > div{
+            width: 50px;
+            height: 50px;  
+            border-radius: 3px;
+            background-color: rgb(41, 41, 41);
+            color: var(--grey);
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover{
+                background-color: rgba(yellow,0.3);
+            }
+
+            &:hover > svg{
+                color: white;
+            }
+        }
+
+        svg{
+            width: 25px;
+            height: 25px; 
+        }
+    }
+
+
+    #upload_centre{
+        width: clamp(250px,60vw,500px);
+        // height: 200px;
+        padding: 1em;
+        margin-top: 1em;
+        background-color: rgb(41, 41, 41);
+        // outline: 2px solid red;
+
+        @media(max-width: 500px){
+            width: 100%;
+        }
+
+        input[type='file']{
+            display: none;
+        }
+
+        label{
+            font-size: 0.8rem;
+            color: var(--grey);
+        }
+
+        input,textarea{
+            @include input;
+            border: 1px solid rgba(black,0.5);
+            background-color: rgba(black,0.3);
+            color: var(--grey);
+            box-shadow: 5px 5px 5px rgba(black,0.1) inset;
+
+            &:focus{
+                outline: none;
+                outline: 1px solid var(--grey);
+                box-shadow: none;
+            }
+        }
+
+        input,textarea,button{
+            width: 100%;
+            padding: 0.3em;
+            font-size: 1.2rem;
+            font-family: inherit;
+            resize: unset;
+        }
+
+        button[type='submit']{
+            @include button;
+            margin-top: 0.5em;
+            width: 40%;
+            // outline: 1px solid white;
+            color: white;
+            background-color: rgba(yellow,0.3);
+
+            &:hover{
+                outline: none;
+                color: black;
+                font-weight: bold;
+                background-color: var(--yellow);
+            }
+        }
+
+        button[disabled]{
+            background-color: rgba(black,0.1);
+            color: var(--grey);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+    }
+}
+
+.episodes_container{
+    h2{
+        margin-bottom: 1em;
+    }
+}
+
+.episode{
+    // outline: 2px solid white;
+    border-radius: 3px;
+    background-color: rgb(95, 95, 95);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover{
+        outline: 2px solid rgba(white,0.3);
+    }
+
+    .info{
+        .episode_title{
+            font-weight: bold;
+        }
+    }
+
+    a{
+        // outline: 1px solid red;
+        display: flex;
+        align-items: center;
+
+        svg{
+            fill: rgba(black,0.7);
+            cursor: pointer;
+
+            &:hover{
+                fill: rgb(247, 54, 54);
+            }
+        }
+    }
+}
+
+.episode.remove{
+    outline: 2px solid rgb(247, 54, 54);
+}
+
